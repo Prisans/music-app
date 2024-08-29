@@ -1,13 +1,16 @@
+/* Import Tailwind's base, components, and utilities styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Define custom CSS variables for color themes */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
+/* Define dark mode color themes using prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -16,6 +19,7 @@
   }
 }
 
+/* Apply custom color themes to the body */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -26,6 +30,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Extend Tailwind's utility classes */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
